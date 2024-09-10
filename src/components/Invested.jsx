@@ -4,10 +4,12 @@ const Invested = () => {
     {
       label: "Invested",
       value: 72.72,
+      color: "#007D85",
     },
     {
       label: "Gains",
       value: 16.38,
+      color: "#8DA0AA",
     },
   ];
 

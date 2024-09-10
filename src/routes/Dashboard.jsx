@@ -32,7 +32,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-slate-50 space-x-10 w-full flex flex-col md:flex-row">
+    <div className="space-x-10 w-full flex flex-col md:flex-row">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4 w-full md:w-1/2 h-auto md:h-full">
         {Object.keys(DashboardItems).map((key) => {
           return (
@@ -46,7 +46,7 @@ const Dashboard = () => {
         })}
       </div>
       <div
-        className={`w-full md:w-1/2 h-64 md:h-full bg-slate-400 ${selectedCard !== "Invested" ? transitionClass : ""}`}
+        className={`w-full p-[24px] md:w-1/2 h-64 md:h-full ${selectedCard !== "Invested" ? transitionClass : ""}`}
       >
         {selectedCard && <SelectedComponent />}
       </div>

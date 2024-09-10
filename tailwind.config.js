@@ -5,11 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2A4D49",
-        secondary: "#64C892",
+        primary: "#007D85",
+        secondary: "#D9DFE3",
+        textPrimary: "#181E20",
+        textSecondary: "#5A6D78",
+        textTertiary: "#8DA0AA",
+        background: "#F8F9F9",
       },
       boxShadow: {
-        "3xl": "0 35px 60px -15px #64C892",
+        "3xl": "0 35px 60px -15px #007D85",
       },
       keyframes: {
         slideIn: {

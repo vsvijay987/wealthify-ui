@@ -17,14 +17,20 @@ const ActionCard = ({ value, onClick, isSelected }) => {
         <CardMedia
           className="h-[180px]"
           component="img"
+          sizes="small"
           image={image}
           alt={name}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            gutterBottom
+            variant="h5"
+            className="text-textPrimary"
+            component="div"
+          >
             {name}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography variant="body2" className="text-textSecondary">
             {description}
           </Typography>
         </CardContent>
