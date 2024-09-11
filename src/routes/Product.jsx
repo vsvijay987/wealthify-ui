@@ -47,8 +47,8 @@ const Product = () => {
         size: 200,
       },
       {
-        field: "Product NAV",
-        header: "productNAV",
+        field: "productNAV",
+        header: "Product NAV",
         size: 150,
       },
       {
