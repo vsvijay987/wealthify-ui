@@ -5,11 +5,13 @@ import InvestedComponent from "../components/Invested";
 import FundsComponents from "../components/Funds";
 import LoyaltyComponent from "../components/Loyalty";
 import GoalsComponent from "../components/Goals";
+import { useUsers } from "../services/queries";
+import InvestedActionCard from "../components/InvestedActionCard";
 
 const Dashboard = () => {
-  const [selectedCard, setSelectedCard] = useState(
-    Object.keys(DashboardItems)[0],
-  );
+  const users = useUsers();
+  console.log("users: ", users);
+  const [selectedCard, setSelectedCard] = useState("");
   const [transitionClass, setTransitionClass] = useState("");
   useEffect(() => {
     setTransitionClass("animate-slideIn");
@@ -28,25 +30,28 @@ const Dashboard = () => {
   const SelectedComponent = componentMapping[selectedCard];
 
   const handleCardClick = (name) => {
-    setSelectedCard(name);
+    setSelectedCard((prevSelected) => (prevSelected === name ? "" : name));
   };
 
   return (
-    <div className="space-x-10 w-full flex flex-col md:flex-row">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4 w-full md:w-1/2 h-auto md:h-full">
-        {Object.keys(DashboardItems).map((key) => {
-          return (
+    <div className="flex justify-center items-center w-full">
+      <div
+        className={`p-4 ${selectedCard ? "w-1/2" : "w-full flex justify-center items-center"}`}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {Object.keys(DashboardItems).map((key) => (
             <ActionCard
               key={key}
               value={DashboardItems[key]}
               onClick={() => handleCardClick(key)}
               isSelected={selectedCard === key}
+              className="w-full"
             />
-          );
-        })}
+          ))}
+        </div>
       </div>
       <div
-        className={`w-full p-[24px] md:w-1/2 h-64 md:h-full ${selectedCard !== "Invested" ? transitionClass : ""}`}
+        className={`p-[24px] h-64 md:h-full ${selectedCard ? `w-1/2 ${transitionClass}` : "w-0"} transition-all duration-300`}
       >
         {selectedCard && <SelectedComponent />}
       </div>

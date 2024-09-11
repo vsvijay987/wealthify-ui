@@ -9,14 +9,14 @@ import {
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Dashboard from "./routes/Dashboard";
-import Profile from "./routes/Profile";
+import Product from "./routes/Product";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Home />}>
       <Route path="/" element={<Navigate to="dashboard" />} />
       <Route path="dashboard" element={<Dashboard />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path="product" element={<Product />} />
     </Route>,
   ),
 );

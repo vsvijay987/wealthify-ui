@@ -1,10 +1,10 @@
 import { useQuery, useQueries, keepPreviousData } from "@tanstack/react-query";
-import { getProjects, getTodo, getTodosIds } from "./api";
+import { getProjects, getTodo, getUsers } from "./api";
 
-export function useTodosIds() {
+export function useUsers() {
   return useQuery({
-    queryKey: ["todos"],
-    queryFn: getTodosIds,
+    queryKey: ["users"],
+    queryFn: getUsers,
   });
 }
 

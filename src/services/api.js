@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "http://dummyjson.com";
 const axiosInstance = axios.create({ baseURL: BASE_URL });
 
-export const getTodosIds = async () => {
-  return (await axiosInstance.get("todos")).data.map((todo) => todo.id);
+export const getUsers = async () => {
+  return (await axiosInstance.get("users")).data;
 };
 
 export const getTodo = async (id) => {

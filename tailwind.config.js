@@ -13,6 +13,7 @@ export default {
         background: "#F8F9F9",
       },
       boxShadow: {
+        "custom-2xl": "0 25px 50px -12px #007D85",
         "3xl": "0 35px 60px -15px #007D85",
       },
       keyframes: {

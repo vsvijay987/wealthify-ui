@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CgProfile } from "react-icons/cg";
 import { ImParagraphJustify } from "react-icons/im";
 import { RxDashboard } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
@@ -43,7 +42,7 @@ const TopNav = () => {
                   isActive ? "border-b-2 border-primary" : ""
                 }`
               }
-              to="/profile"
+              to="/product"
             >
               <FaCoins className="w-5 h-5" /> <span>Product</span>
             </NavLink>
