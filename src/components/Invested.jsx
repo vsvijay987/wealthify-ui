@@ -1,33 +1,36 @@
-import { PieChart } from "@mui/x-charts/PieChart";
+import { BarChart } from "@mui/x-charts/BarChart";
 const Invested = () => {
-  const dummyData = [
+  const dataset = [
     {
+      amount: 4000,
       label: "Invested",
-      value: 72.72,
-      color: "#007D85",
     },
     {
-      label: "Gains",
-      value: 16.38,
-      color: "#8DA0AA",
+      amount: 10000,
+      label: "Total",
     },
   ];
 
-  const valueFormatter = (item) => `${item.value}%`;
+  const chartSetting = {
+    xAxis: [
+      {
+        label: "Amount",
+      },
+    ],
+    width: 450,
+    height: 300,
+  };
+
+  const valueFormatter = (value) => `${value}`;
 
   return (
-    <div className="w-full h-full">
-      <PieChart
-        className="w-full h-full"
-        series={[
-          {
-            data: dummyData,
-            highlightScope: { fade: "global", highlight: "item" },
-            faded: { innerRadius: 10, additionalRadius: -100, color: "gray" },
-            valueFormatter,
-          },
-        ]}
-        height={400}
+    <div className="w-full h-full flex justify-center items-center">
+      <BarChart
+        dataset={dataset}
+        yAxis={[{ scaleType: "band", dataKey: "label" }]}
+        series={[{ dataKey: "amount", label: "Amount", valueFormatter }]}
+        layout="horizontal"
+        {...chartSetting}
       />
     </div>
   );

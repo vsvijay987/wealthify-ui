@@ -13,7 +13,7 @@ const TopNav = () => {
   };
 
   return (
-    <nav className="bg-black border-gray-200 fixed w-full">
+    <nav className="bg-black border-gray-200 fixed w-full z-20">
       <div className=" flex flex-wrap items-center justify-between mx-auto px-[30px] py-1">
         <a className="flex items-center space-x-3 md:block text-white hidden">
           <img src={logo} alt="Wealthify" className="h-[35px] w-auto" />

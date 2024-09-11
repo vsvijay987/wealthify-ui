@@ -6,7 +6,6 @@ import FundsComponents from "../components/Funds";
 import LoyaltyComponent from "../components/Loyalty";
 import GoalsComponent from "../components/Goals";
 import { useUsers } from "../services/queries";
-import InvestedActionCard from "../components/InvestedActionCard";
 
 const Dashboard = () => {
   const users = useUsers();

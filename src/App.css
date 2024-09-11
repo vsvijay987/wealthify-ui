@@ -2,3 +2,8 @@
   margin: 0 auto;
   height: 100vh;
 }
+
+.ag-theme-quartz .ag-header-cell {
+  background-color: #007d85;
+  color: white;
+}

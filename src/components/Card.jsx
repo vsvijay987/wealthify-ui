@@ -9,7 +9,7 @@ import LoyaltyActionCard from "./LoyaltyActionCard";
 import GoalsActionCard from "./GoalsActionCard";
 
 const ActionCard = ({ value, onClick, isSelected }) => {
-  const { name, description, image } = value;
+  const { name, description } = value;
   console.log("name: ", name);
 
   const renderComponentByName = (name) => {
@@ -35,10 +35,12 @@ const ActionCard = ({ value, onClick, isSelected }) => {
         }`}
         sx={{ maxWidth: 345 }}
       >
-        <CardActionArea onClick={onClick}>
-          <div className="h-[178px] w-full">{renderComponentByName(name)}</div>
+        <CardActionArea>
+          <div className="h-[178px] w-full cursor-not-allowed">
+            {renderComponentByName(name)}
+          </div>
 
-          <CardContent>
+          <CardContent onClick={onClick}>
             <Typography
               gutterBottom
               variant="h5"
