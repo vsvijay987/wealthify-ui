@@ -14,6 +14,16 @@ const data = [
     productCategory: "Small Cap",
     productSubCategory: "Eq",
   },
+  {
+    productId: 1002,
+    productName: "DWS GenZ Dummy Fund",
+    productNAV: 1200,
+    calcDate: null,
+    minAmount: 1000,
+    currency: "INR",
+    productCategory: "Large Cap",
+    productSubCategory: "FI",
+  },
 ];
 
 const Product = () => {
@@ -35,6 +45,11 @@ const Product = () => {
         field: "productSubCategory",
         header: "Sub-Category",
         size: 200,
+      },
+      {
+        field: "Product NAV",
+        header: "productNAV",
+        size: 150,
       },
       {
         field: "minAmount",

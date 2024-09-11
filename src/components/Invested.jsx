@@ -2,12 +2,12 @@ import { BarChart } from "@mui/x-charts/BarChart";
 const Invested = () => {
   const dataset = [
     {
-      amount: 4000,
+      amount: 80000,
       label: "Invested",
     },
     {
-      amount: 10000,
-      label: "Total",
+      amount: 100000,
+      label: "Current",
     },
   ];
 
