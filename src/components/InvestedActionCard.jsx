@@ -5,15 +5,15 @@ const InvestedActionCard = () => {
         <ul className="space-y-3">
           <li className="flex justify-between">
             <span className="font-medium text-primary">Invested Amount:</span>
-            <span className="text-textSecondary">1000</span>
+            <span className="text-textSecondary">8,50,000</span>
           </li>
           <li className="flex justify-between">
-            <span className="font-medium text-primary">Total Gain:</span>
-            <span className="text-textSecondary">2000</span>
+            <span className="font-medium text-primary">Current Value:</span>
+            <span className="text-textSecondary">1,003,000</span>
           </li>
           <li className="flex justify-between">
-            <span className="font-medium text-primary">Total Value:</span>
-            <span className="text-textSecondary">3000</span>
+            <span className="font-medium text-primary">% Gain:</span>
+            <span className="text-textSecondary">18%</span>
           </li>
         </ul>
       </div>

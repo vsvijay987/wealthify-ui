@@ -1,6 +1,5 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import InvestedActionCard from "./InvestedActionCard";
@@ -30,7 +29,7 @@ const ActionCard = ({ value, onClick, isSelected }) => {
   return (
     <div>
       <Card
-        className={`h-[290px] shadow-custom-2xl transition-all duration-300 ${
+        className={`h-[290px] hover:scale-105 shadow-custom-2xl transition-all duration-300 ${
           isSelected ? "shadow-3xl transform scale-105" : ""
         }`}
         sx={{ maxWidth: 345 }}

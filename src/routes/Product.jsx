@@ -18,7 +18,6 @@ const data = [
 
 const Product = () => {
   const [rowData, setRowData] = useState();
-  console.log("selectedRows: ", rowData);
 
   const columns = useMemo(
     () => [
@@ -86,7 +85,12 @@ const Product = () => {
         getRowStyle={getRowStyle}
       />
       <div className="mt-6">
-        <Button className="bg-primary" size="small" variant="contained">
+        <Button
+          disabled={!rowData}
+          className={`bg-primary ${!rowData && "bg-secondary"}`}
+          size="small"
+          variant="contained"
+        >
           Invest now
         </Button>
       </div>

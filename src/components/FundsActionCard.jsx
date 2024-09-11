@@ -4,13 +4,25 @@ const FundsActionCard = () => {
       <div className="bg-gray-100 p-6 rounded-lg shadow-lg max-w-md w-full">
         <ul className="space-y-3">
           <li className="font-medium text-white bg-primary p-2 rounded">
-            Fund 1
+            DWS India Small Cap Fund
           </li>
           <li className="font-medium text-white bg-primary p-2 rounded">
-            Fund 2
+            DWS Value Discovery Fund
           </li>
           <li className="font-medium text-white bg-primary p-2 rounded">
-            Fund 3
+            DWS Blue Chip Fund
+          </li>
+          <li className="font-medium text-white bg-primary p-2 rounded">
+            DWS Nifty 50 Fund
+          </li>
+          <li className="font-medium text-white bg-primary p-2 rounded">
+            DWS Large Cap Fund
+          </li>
+          <li className="font-medium text-white bg-primary p-2 rounded">
+            DWS Technology Fund
+          </li>
+          <li className="font-medium text-white bg-primary p-2 rounded">
+            DWS ESG Fund
           </li>
         </ul>
       </div>

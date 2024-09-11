@@ -2,6 +2,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Typography } from "@mui/material";
 
 const Funds = () => {
   return (
@@ -12,24 +13,73 @@ const Funds = () => {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          Fund 1
+          DWS India Small Cap Fund
         </AccordionSummary>
         <AccordionDetails className="text-textSecondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <div>
+            <Typography> Current Value: 10,000</Typography>
+            <Typography>% Gain: 10%</Typography>
+          </div>
         </AccordionDetails>
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2-content"
-          id="panel2-header"
+          aria-controls="panel1-content"
+          id="panel1-header"
         >
-          Fund 2
+          DWS India Small Cap Fund
         </AccordionSummary>
         <AccordionDetails className="text-textSecondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <div>
+            <Typography> Current Value: 40,000</Typography>
+            <Typography>% Gain: 14%</Typography>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          DWS Value Discovery Fund
+        </AccordionSummary>
+        <AccordionDetails className="text-textSecondary">
+          <div>
+            <Typography> Current Value: 37,000</Typography>
+            <Typography>% Gain: 14%</Typography>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          DWS Technology Fund
+        </AccordionSummary>
+        <AccordionDetails className="text-textSecondary">
+          <div>
+            <Typography> Current Value: 15,000</Typography>
+            <Typography>% Gain: 12%</Typography>
+          </div>{" "}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          DWS Blue Chip Fund
+        </AccordionSummary>
+        <AccordionDetails className="text-textSecondary">
+          <div>
+            <Typography> Current Value: 41,000</Typography>
+            <Typography>% Gain: 13%</Typography>
+          </div>{" "}
         </AccordionDetails>
       </Accordion>
     </div>
